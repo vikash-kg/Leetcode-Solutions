@@ -45,6 +45,7 @@ struct Node
 */
 class Solution
 {
+    public:
     Node* reverse(Node* head){
     if(head== nullptr || head->next == nullptr)
     return head;
@@ -57,8 +58,8 @@ class Solution
         curr = forward;
     }
     return prev;
-}
-    public:
+    }
+    
     Node *compute(Node *head)
     {
         // your code goes here
@@ -79,6 +80,7 @@ class Solution
                 head = prev->next;
             }
         }
+        
         head = reverse(curr);
         return head;
     }
